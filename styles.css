@@ -1,0 +1,152 @@
+body {
+    background-image: linear-gradient(to right, #32285e, #174454);
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-content {
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.navbar-content p {
+    text-decoration: none;
+    color: white;
+    font-family: "Liter", serif;
+    font-size: 28px;
+    font-weight: bold;
+    transition-duration: 0.3s;
+}
+
+.navbar-content p:hover {
+    transition-duration: 0.3s;
+    color: red;
+    font-size: 32px;
+}
+
+.navbar-content a {
+    text-decoration: none;
+}
+
+.button {
+    display: flex;
+}
+
+#logokbuttonum {
+    width: 85px;
+    height: 85px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.first-jmeno {
+    color: #14c971;
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Liter", serif;
+}
+
+.first-jmeno h1 {
+    font-size: 40px;
+}
+
+.first-jmeno h2 {
+    font-size: 24px;
+}
+
+#prvniradekpodjmenem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prvniradekpodjmenem h2 {
+    text-align: center;
+    /* Text uvnitř kontejneru bude zarovnán na střed */
+    width: 300px;
+    /* Nastavíme šířku textu, aby se zalomil do více řádků */
+}
+
+#educanetbrno {
+    text-decoration: none;
+    color: #ec6b10;
+}
+
+#informacni-technologie {
+    color: #0099b1;
+    text-decoration: none;
+}
+
+.info2-container {
+    text-align: center;
+    font-family: "Liter", serif;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 0;
+}
+
+.info2-container p {
+    color: #14c971;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#mojefoto {
+    width: 315px;
+    height: 325px;
+    border-radius: 10px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    margin-top: 100px;
+}
+
+.omne-nazev {
+    text-align: center;
+    margin-top: 5vh;
+    font-family: "Liter", serif;
+    font-size: 20px;
+    color: white;
+}
+
+@media (max-width:320px) {
+    .info-container {
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .info2-container {
+        text-align: center;
+    }
+
+    #mojefoto {
+        width: 275px;
+        height: 275px;
+    }
+}
+
+@media (max-width:430px) {
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-content {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 35px;
+        row-gap: 0px;
+        /* Umožní prvkům přecházet na nový řádek */
+        transition-duration: 0.3s;
+    }
+}
