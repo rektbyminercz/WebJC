@@ -80,6 +80,15 @@ body {
     text-decoration: none;
 }
 
+#FiveM {
+    text-decoration: none;
+    color: #b4a034;
+}
+
+#mezera {
+    margin-top: 25px;
+}
+
 .info2-container {
     text-align: center;
     font-family: "Liter", serif;
@@ -114,6 +123,25 @@ body {
     font-family: "Liter", serif;
     font-size: 20px;
     color: white;
+    margin-bottom: 5vh;
+}
+
+.popismne p {
+    text-align: center;
+    width: 700px;
+    font-family: "Liter", serif;
+    font-weight: bold;
+    color: lightgreen;
+    margin: 0px auto;
+    font-size: 2vh;
+}
+
+.copyright h2 {
+    text-align: center;
+    color: white;
+    font-family: "Liter", serif;
+    gap: 50px;
+    font-size: 2.5vh;
 }
 
 @media (max-width:320px) {
@@ -148,5 +176,11 @@ body {
         row-gap: 0px;
         /* Umožní prvkům přecházet na nový řádek */
         transition-duration: 0.3s;
+    }
+
+    .popismne p {
+        font-size: 2.8vh;
+        /* Lehce zmenší text na menších displejích */
+        max-width: 75%;
     }
 }
