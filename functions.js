@@ -20,6 +20,20 @@ function dnyDoNarozenin(datumNarozeni) {
     return rozdil;
 }
 
+function natydny(dnyDoNarozenin) {
+    let tydny = Math.floor(dnyDoNarozenin / 7);
+    let zbyvajicidny = dnyDoNarozenin % 7;
+
+    if (tydny === 0) {
+        return zbyvajicidny === 1 ? `1 den` : `${zbyvajicidny} dní`;
+    } else if (tydny === 1) {
+        return `1 týden a ${zbyvajicidny} ${zbyvajicidny === 1 ? "den" : "dní"}`;
+    } else {
+        return `${tydny} týdnů a ${zbyvajicidny} ${zbyvajicidny === 1 ? "den" : "dní"}`;
+    }
+}
+
+
 function aktualizovatVek() {
     let vekElement = document.getElementById("vek");
     let dnyElement = document.getElementById("dny");
@@ -28,6 +42,8 @@ function aktualizovatVek() {
 
     vekElement.textContent = `${vypocetVeku(datumNarozeni)}`;
     dnyElement.textContent = `${dnyDoNarozenin(datumNarozeni)} dní`;
+    dnyElement.textContent = `${dnyDoNarozenin(datumNarozeni)} dní (${natydny(dnyDoNarozenin(datumNarozeni))})`;
+
 }
 
 // Aktualizace každých 50 ms pro přesnost
@@ -37,5 +53,5 @@ aktualizovatVek(); // První načtení okamžitě
 //vypočet copyrightu
 const startYear = 2024; // Změň podle potřeby
 const currentYear = new Date().getFullYear();
-const text = startYear === currentYear ? ` ©  ${currentYear}` : `© Jakub Cendelín ${startYear}–${currentYear}`;
+const text = startYear === currentYear ? ` ©  ${currentYear} Jakub Cendelín` : `© Jakub Cendelín ${startYear}–${currentYear}`;
 document.getElementById("copyright").textContent = text;
