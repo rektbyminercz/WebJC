@@ -161,12 +161,26 @@ body {
     }
 }
 
+@media (max-width:375px) {
+    .info2-container p {
+        font-size: 2.5vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .info2-container p {
+        font-size: 2.5vh;
+    }
+}
 @media (max-width:430px) {
     .info-container {
         flex-direction: column;
         align-items: center;
     }
 
+                .info2-container p {
+                    font-size: 2.5vh;
+                }
     .navbar-content {
         text-align: center;
         display: flex;
