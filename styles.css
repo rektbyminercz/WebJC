@@ -160,6 +160,10 @@ body {
     font-size: 18px;
 }
 
+.info2-container i {
+    margin-right: 10px;
+}
+
 #mojefoto {
     width: 315px;
     height: 325px;
