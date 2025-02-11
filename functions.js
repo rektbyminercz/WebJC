@@ -21,17 +21,40 @@ function dnyDoNarozenin(datumNarozeni) {
 }
 
 function natydny(dnyDoNarozenin) {
-    let tydny = Math.floor(dnyDoNarozenin / 7);
-    let zbyvajicidny = dnyDoNarozenin % 7;
+    let tydny = Math.floor(dnyDoNarozenin / 7); // Počet celých týdnů
+    let zbyvajicidny = dnyDoNarozenin % 7; // Počet zbývajících dní
 
-    if (tydny === 0) {
-        return zbyvajicidny === 1 ? `1 den` : `${zbyvajicidny} dní`;
-    } else if (tydny === 1) {
-        return `1 týden a ${zbyvajicidny} ${zbyvajicidny === 1 ? "den" : "dní"}`;
+    let tydnyText = "";
+    let dnyText = "";
+
+    // Skloňování týdnů
+    if (tydny === 1) {
+        tydnyText = "1 týden";
+    } else if (tydny >= 2 && tydny <= 4) {
+        tydnyText = `${tydny} týdny`;
+    } else if (tydny >= 5) {
+        tydnyText = `${tydny} týdnů`;
+    }
+
+    // Skloňování dnů
+    if (zbyvajicidny === 1) {
+        dnyText = "1 den";
+    } else if (zbyvajicidny >= 2 && zbyvajicidny <= 4) {
+        dnyText = `${zbyvajicidny} dny`;
+    } else if (zbyvajicidny >= 5) {
+        dnyText = `${zbyvajicidny} dní`;
+    }
+
+    // Výběr správného formátu výstupu
+    if (tydny > 0 && zbyvajicidny > 0) {
+        return `${tydnyText} a ${dnyText}`;
+    } else if (tydny > 0) {
+        return tydnyText;
     } else {
-        return `${tydny} týdnů a ${zbyvajicidny} ${zbyvajicidny === 1 ? "den" : "dní"}`;
+        return dnyText;
     }
 }
+
 
 
 function aktualizovatVek() {
@@ -40,9 +63,8 @@ function aktualizovatVek() {
 
     let datumNarozeni = "2007-03-07"; // Opravený formát na YYYY-MM-DD (přidána nula k měsíci a dni)
 
-    vekElement.textContent = `${vypocetVeku(datumNarozeni)}`;
-    dnyElement.textContent = `${dnyDoNarozenin(datumNarozeni)} dní`;
-    dnyElement.textContent = `${dnyDoNarozenin(datumNarozeni)} dní (${natydny(dnyDoNarozenin(datumNarozeni))})`;
+    vekElement.textContent = `${vypocetVeku(datumNarozeni)}`; // Vloží vypočítaný věk
+    dnyElement.textContent = `${dnyDoNarozenin(datumNarozeni)} dní (${natydny(dnyDoNarozenin(datumNarozeni))})`; // Zobrazí dny do narozenin včetně týdnů
 
 }
 
