@@ -232,6 +232,36 @@ body {
     font-size: 22px;
 }
 
+.projects {
+    display: flex;
+    justify-content: center;
+}
+
+.projekt {
+    width: 325px;
+    height: 375px;
+    background-color: white;
+    border-radius: 10px;
+    border: 5px solid black;
+    overflow: hidden;
+}
+
+.projekt img {
+    height: 165px;
+    width: 100%;
+}
+
+.projekt h1 {
+    font-family: Liter, sans-serif;
+    text-align: center;
+}
+
+.projekt p {
+    font-family: Liter, sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+
 @media (max-width:320px) {
     .info-container {
         display: block;
@@ -275,6 +305,10 @@ body {
         flex-wrap: wrap;
     }
 
+    .projekt {
+        width: 300px;
+        height: 350px;
+    }
 }
 
 @media (max-width:430px) {
